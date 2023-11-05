@@ -2,9 +2,7 @@
   <div class="rounded-lg p-6 bg-white shadow-md rounded-lg">
     <form>
       <div class="mb-4">
-        <label for="username" class="block text-gray-700 text-sm font-bold mb-2"
-          >Username:</label
-        >
+        <label for="username" class="block text-gray-700 text-sm font-bold mb-2">Username</label>
         <input
           id="username"
           rows="4"
@@ -16,9 +14,7 @@
       <div class="mb-4">
         <label
           for="postInput"
-          class="block text-gray-700 text-sm font-bold mb-2"
-          >Write your post:</label
-        >
+          class="block text-gray-700 text-sm font-bold mb-2">Your post</label>
         <textarea
           id="postInput"
           rows="4"
