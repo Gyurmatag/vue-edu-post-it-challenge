@@ -4,6 +4,8 @@ A feladat megoldásához szükséges kritériumok:
 - A posztokat lehessen listázni ugyanezen az oldalon (nem kell lapozás)
 - Amikor egy poszt hozzáadásra kerül, akkor vagy legyen "optimistic update" vagy pedig kerüljön a lista újból lekérésre a végponttól
 
+A feladatot megcsinálhatjátok remote backend-del, a következő képpen:
+
 A feladat megoldásához létrehoztam két végpontot, amik Serverless Edge Function-ként futnak
 és [Turso](Turso.tech) adatbázishoz kapcsolódnak.
 - POST végpont:
@@ -49,6 +51,11 @@ A feladat megoldásához létrehoztam két végpontot, amik Serverless Edge Func
        }
     },
   ]
+
+
+
+Vagy éppen felhúzhatjátok a saját backendeteket, ebből a repo-ból:
+https://github.com/Gyurmatag/vue-edu-post-it-challenge-backend.git
 
 A kész alkalmazás megtalálható ezen a linken:
 https://edge-post.vercel.app/
