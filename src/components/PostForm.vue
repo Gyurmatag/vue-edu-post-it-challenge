@@ -1,9 +1,28 @@
+<script setup lang="ts">
+import { ref } from 'vue';
+import { IPost } from '../interfaces/IPost.interface';
+
+const emit = defineEmits<{
+  formSubmit: [post: IPost]
+}>()
+
+let name = ref('')
+let text = ref('')
+
+const onFormSubmit = () => {
+  if(name.value && text.value) {
+    emit('formSubmit', { name: name.value, text: text.value})
+  }
+}
+</script>
+
 <template>
   <div class="rounded-lg p-6 bg-white shadow-md rounded-lg">
-    <form>
+    <form @submit.prevent="onFormSubmit">
       <div class="mb-4">
         <label for="username" class="block text-gray-700 text-sm font-bold mb-2">Username</label>
         <input
+          v-model="name"
           id="username"
           rows="4"
           type="text"
@@ -16,6 +35,7 @@
           for="postInput"
           class="block text-gray-700 text-sm font-bold mb-2">Your post</label>
         <textarea
+          v-model="text"
           id="postInput"
           rows="4"
           placeholder="What's on your mind?"
